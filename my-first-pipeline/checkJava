@@ -2,15 +2,13 @@ pipeline {
   agent {
     docker { image 'openjdk:11' }
   }
-  environment {
-        JAVA_HOME = tool 'JDK11'
-    }
+
   stages {
     stage('Test_Java_Ver') {
       steps {
         sh 'java --version'
         sh 'javac my-first-pipeline/Test.java'
-        sh '${env.JAVA_HOME}/bin/java -cp build Test'
+        sh '/bin/java -cp build Test'
 
       }
       }
