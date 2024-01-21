@@ -8,7 +8,6 @@ pipeline {
   stages {
     stage('Test_Java_Ver') {
       steps {
-        def javaHome = tool 'JDK11'
         sh 'java --version'
         sh 'javac my-first-pipeline/Test.java'
         sh '${env.JAVA_HOME}/bin/java -cp build Test'
