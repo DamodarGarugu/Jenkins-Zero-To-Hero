@@ -6,7 +6,7 @@ pipeline {
     stage('Test_Java_Ver') {
       steps {
         sh 'java --version'
-        sh 'javac ./Test.java'
+        sh 'javac my-first-pipeline/Test.java'
         sh 'java Test'
       }
       }
