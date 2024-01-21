@@ -7,6 +7,13 @@ pipeline {
       steps {
         sh 'java --version'
       }
+              stage('Run the Code'){
+           steps{
+                sh 'javac ./Test.java'
+                sh 'java Test'
+                }
+            }
+        }
     }
   }
 }
